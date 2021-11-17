@@ -27,7 +27,7 @@ void test(void *pvParameters)
     memset(&dev, 0, sizeof(ccs811_dev_t)); // Zero descriptor
 
     ESP_LOGI(TAG, "Descriptor initialization");
-    ESP_ERROR_CHECK(ccs811_init_desc(&dev, CCS811_I2C_ADDRESS_1, 0, SDA_GPIO, SCL_GPIO));
+    ESP_ERROR_CHECK(ccs811_init_desc(&dev, CCS811_I2C_ADDRESS_2, 0, SDA_GPIO, SCL_GPIO));
 
     // Once I2C descreiptor initialized, function `ccs811_init()` has to be called
     // for each CCS811 sensor to initialize the sensor and to check its availability
